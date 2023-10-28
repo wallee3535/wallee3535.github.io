@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .card {
+      width: 800px;
+      height: 600px;
+      background: #FFFFFF;
+      box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
+      border-radius: 40px;
+      display: flex;
+      flex-direction: row;
+      margin: 0 auto;
+    }
+
+    .result {
+      flex: 1 1 0;
+      background-image: linear-gradient(0deg, #2466ff, #7207ff);
+      border-radius: 40px;
+      align-items: center;
+      align-content: center;
+      padding: 50px;
+    }
+
+    .summary {
+      flex: 1 1 0;
+      background: #FFFFFF;
+      border-radius: 40px;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .center-text {
+      text-align: center;
+    }
+
+    .circle-container {
+      width: 200px;
+      height: 200px;
+      /* max-height: 200px; */
+      background: #4f01a7;
+      border-radius: 50%;
+      margin: 0 auto;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      padding-top: 40px;
+      box-sizing: border-box;
+
+    }
+
+    .circle-content {
+      margin: 0 auto;
+    }
+
+    .continue-button {
+      width: 100%;
+      background-color: rgb(32, 32, 82);
+      border-radius: 50px;
+      border-width: 0;
+      padding: 20px;
+      margin-top: auto;
+      color: white;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .score-item {
+      margin-top: 10px;
+      border-radius: 10px;
+      background: #ffefef;
+      padding: 14px;
+      color: rgb(250, 131, 95);
+      font-weight: 700;
+    }
+
+    .score-numerator {
+      color: rgb(32, 32, 82);
+    }
+
+    .score-denominator {
+      color: rgb(179, 179, 179);
+    }
+
+    .title {
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .result-title {
+      color: rgba(201, 201, 201)
+    }
+
+    .result-score {
+      color: white;
+      margin: auto;
+      font-size: 70px;
+      font-weight: 700;
+    }
+
+    .result-score-subtext {
+      color: rgba(201, 201, 201);
+      font-weight: 700;
+    }
+
+    .score-word {
+      font-size: 40px;
+      color: white;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .score-desc {
+      font-size: 16px;
+      color: white;
+    }
+
+    .summary-title {
+      margin-bottom: 20px;
+    }
+
+    .score-fraction {
+      float: right;
+    }
+
+    * {
+      font-family: 'Hanken Grotesk', sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="result">
+      <div class="center-text title result-title">Your Result</div>
+      <div class="circle-container">
+        <div class="circle-content">
+          <div class="center-text result-score">76</div>
+          <div class="center-text result-score-subtext">of 100</div>
+        </div>
+
+      </div>
+
+
+      <div class="center-text score-word">Great</div>
+      <div class="center-text score-desc">You scored higher than 65% of the people who have taken these tests.</div>
+
+
+    </div>
+    <div class="summary">
+      <div class="title summary-title">Summary</div>
+
+      <div class="score-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" class="bi bi-lightning-charge"
+          viewBox="0 0 16 16">
+          <path
+            d="M11.251 .068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41 4.157 8.5z"
+            stroke="currentColor" stroke-width="1" />
+        </svg>
+        <span>Reaction</span>
+        <span class="score-fraction">
+          <span class="score-numerator">80</span>
+          <span class="score-denominator">/ 100</span>
+        </span>
+      </div>
+      <div class="score-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" class="bi bi-lightning-charge"
+          viewBox="0 0 16 16">
+          <path
+            d="M11.251 .068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41 4.157 8.5z"
+            stroke="currentColor" stroke-width="1" />
+        </svg>
+        <span>Reaction</span>
+        <span class="score-fraction">
+          <span class="score-numerator">80</span>
+          <span class="score-denominator">/ 100</span>
+        </span>
+      </div>
+      <div class="score-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" class="bi bi-lightning-charge"
+          viewBox="0 0 16 16">
+          <path
+            d="M11.251 .068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41 4.157 8.5z"
+            stroke="currentColor" stroke-width="1" />
+        </svg>
+        <span>Reaction</span>
+        <span class="score-fraction">
+          <span class="score-numerator">80</span>
+          <span class="score-denominator">/ 100</span>
+        </span>
+      </div>
+      <div class="score-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" class="bi bi-lightning-charge"
+          viewBox="0 0 16 16">
+          <path
+            d="M11.251 .068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41 4.157 8.5z"
+            stroke="currentColor" stroke-width="1" />
+        </svg>
+        <span>Reaction</span>
+        <span class="score-fraction">
+          <span class="score-numerator">80</span>
+          <span class="score-denominator">/ 100</span>
+        </span>
+      </div>
+
+
+
+
+
+
+      <button class="continue-button">Continue</button>
+
+
+    </div>
+  </div>
+
+
+
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+
+</html>
